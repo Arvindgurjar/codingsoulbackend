@@ -29,8 +29,10 @@ router.post("/SushilaDeviBansalCollegeOfTechnologyIndore", async (req, res) => {
 })
 /* for check Login requist */
 router.post("/Login", async (req, res) => {
+    
     try {
         const { email, password } = req.body
+        console.log(req.body.email)
         if (!(password && email)) {
             return res.status(400).send("Invalid Detail");
         }
