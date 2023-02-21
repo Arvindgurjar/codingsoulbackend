@@ -11,7 +11,7 @@ dotenv.config({path:"./Config.env"})
 require("./DataBaseConnection/Connection")
 app.use(cors(
     {
-        origin:['http://localhost:3000/','https://codingsoulbackend.onrender.com/']
+        origin:['https://codingsoulfrontend.onrender.com/','https://codingsoulbackend.onrender.com/']
     }
 ));
 const port = process.env.PORT || 5000;
