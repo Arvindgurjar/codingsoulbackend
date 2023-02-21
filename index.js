@@ -9,7 +9,11 @@ const cookieParser = require("cookie-parser")
 const app =express();
 dotenv.config({path:"./Config.env"})
 require("./DataBaseConnection/Connection")
-app.use(cors());
+app.use(cors(
+    {
+        origin:['http://localhost:3000/','https://codingsoulbackend.onrender.com/']
+    }
+));
 const port = process.env.PORT || 5000;
 app.use(express.json())
 app.use(require("./Routers/Router"));
